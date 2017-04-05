@@ -5,6 +5,10 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
+    <!-- added this -->
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+
     <link rel="manifest" href="manifest.json">
 
     <!-- un-comment this code to enable service worker
@@ -29,7 +33,7 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
-    <!-- debug configuration, remove when production -->	
+    <!-- debug configuration, remove when production -->
     <script src="js/debug_config.js"></script>
 
     <!-- your app's js -->
@@ -40,6 +44,63 @@
   </head>
 
   <body ng-app="starter">
-    <ion-nav-view></ion-nav-view>
+
+    <!--<ion-nav-view></ion-nav-view> I will add another sideBar below-->
+
+
+    <div class="Wrapper" ng-app="myApp">
+      <div class="Sidebar" ng-class="boolie ? 'is-collapsed' : ''">
+          <header class="Sidebar-header">
+              <div class="Sidebar-logo"></div>
+          </header>
+          <nav role="navigation">
+              <ul>
+                  <li class="Sidebar-navItem">
+                      <i class="Sidebar-menuIcon fa fa-bar-chart"></i>
+                      <a href="">Performance</a>
+                  </li>
+                  <li class="Sidebar-navItem">
+                      <i class="Sidebar-menuIcon fa fa-shopping-cart"></i>
+                      <a href="#">Activities</a>
+                  </li>
+                  <li class="Sidebar-navItem">
+                      <i class="Sidebar-menuIcon fa fa-cog"></i>
+                      <a href="#">Settings</a>
+                  </li>
+                  <li class="Sidebar-navItem">
+                      <i class="Sidebar-menuIcon fa fa-question-circle"></i>
+                      <a href="#">Help & Support</a>
+                  </li>
+                  <li class="Sidebar-navItem">
+                      <i class="Sidebar-menuIcon fa fa-sign-out"></i>
+                      <a href="#">Log out</a>
+                  </li>
+              </ul>
+          </nav>
+          <footer class="Sidebar-footer" ng-click="boolie = !boolie">
+              <i class="Sidebar-toggleArrow Sidebar-menuIcon fa fa-arrow-left" ng-class="boolie ? 'rotate' : ''"></i>
+              <span class="Sidebar-toggleText">Minimize menu</span>
+          </footer>
+      </div>
+      <div class="Main"></div>
+  </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+
+      <script src="js/index.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 </html>
